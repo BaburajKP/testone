@@ -1,7 +1,7 @@
 package genericLib;
 
 import java.io.IOException;
-import java.util.Properties;
+
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -14,7 +14,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
 	public WebDriver driver;
-	public Properties p=new Properties();
+	public PropertyFile p=new PropertyFile();
 	public WebDriverUtilies driverutilies=new WebDriverUtilies();
 	@BeforeMethod
 	public void openApp() throws IOException {
@@ -22,7 +22,7 @@ public class BaseClass {
 		
 	driver=new ChromeDriver();
 	driver.manage().window().maximize();
-	driver.get(p.getProperty("url"));
+	driver.get(p.getPropertyFiledata("url"));
 	driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 	
 	}
@@ -36,6 +36,6 @@ public class BaseClass {
 		s.getScreenshot(driver, name);
 		
 	}
-	driver.quit();
+	//driver.quit();
 }
 }
