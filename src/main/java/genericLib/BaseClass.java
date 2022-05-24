@@ -36,6 +36,6 @@ public class BaseClass {
 		s.getScreenshot(driver, name);
 		
 	}
-	//driver.quit();
+	driver.quit();
 }
 }

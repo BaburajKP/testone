@@ -38,13 +38,13 @@ public class Testcases2 extends BaseClass{
 		driverutilies.switchTabs(driver);
 		MenTrunks T=new MenTrunks(driver);
 		T.SelectionTr();
-		//
+		/*
 		Thread.sleep(3000);
 		T.LineTrunkpage();
 		driverutilies.mouseHover(driver,T.getFavouritebt());
 		T.Favorite();
 		
-	/*Point loca = T.getLineTrunk().getLocation();
+	Point loca = T.getLineTrunk().getLocation();
 	int x1=loca.getX();
 	int y1=loca.getY();
 	driverutilies.scrollbar(driver, x1, y1);
